@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.chen.bootextand.service.mapper.IndexMapper">
+    <resultMap id="BaseResultMap" type="cn.chen.bootextand.service.pojo.MusicInfo">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="singer_name" jdbcType="VARCHAR" property="singerName" />
+        <result column="music_size" jdbcType="VARCHAR" property="musicSize" />
+        <result column="music_name" jdbcType="VARCHAR" property="musicName" />
+    </resultMap>
+
+    <select id="selectAll" resultType="cn.chen.bootextand.service.pojo.MusicInfo">
+        select * from music_info;
+    </select>
+</mapper>
